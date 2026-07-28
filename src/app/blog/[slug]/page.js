@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS } from "@/data/posts";
+import ShareButton from "@/components/ShareButton";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -126,18 +127,7 @@ export default async function BlogPostPage({ params }) {
               ))}
             </div>
 
-            <button 
-              className="btn-secondary" 
-              style={{ fontSize: "0.82rem", padding: "6px 14px" }}
-              onClick={() => {
-                if (typeof window !== "undefined") {
-                  navigator.clipboard?.writeText(window.location.href);
-                  alert("Đã sao chép đường dẫn bài viết!");
-                }
-              }}
-            >
-              🔗 Chia sẻ bài viết
-            </button>
+            <ShareButton />
           </div>
         </div>
       </article>
