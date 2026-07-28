@@ -1,100 +1,219 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { useAuth } from "@/context/AuthContext";
+import LoginModal from "@/components/LoginModal";
 
 export default function Navbar() {
+  const { isAdmin, logout } = useAuth();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
   return (
-    <header style={{
-      position: "sticky",
-      top: 0,
-      zIndex: 50,
-      background: "rgba(9, 13, 22, 0.75)",
-      backdropFilter: "blur(16px)",
-      WebkitBackdropFilter: "blur(16px)",
-      borderBottom: "1px solid var(--border-glass)",
-      padding: "1rem 0"
-    }}>
-      <div className="container" style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between"
+    <>
+      <header style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
+        background: "rgba(9, 13, 22, 0.85)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        borderBottom: "1px solid var(--border-glass)",
+        padding: "0.85rem 0"
       }}>
-        {/* Brand Logo */}
-        <Link href="/" style={{
+        <div className="container" style={{
           display: "flex",
           alignItems: "center",
-          gap: "10px",
-          textDecoration: "none"
+          justifyContent: "space-between"
         }}>
-          <div style={{
-            width: "38px",
-            height: "38px",
-            borderRadius: "10px",
-            background: "var(--gradient-primary)",
+          {/* Brand Logo */}
+          <Link href="/" style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            fontWeight: "800",
-            fontSize: "1.2rem",
-            color: "#ffffff",
-            boxShadow: "0 4px 14px rgba(99, 102, 241, 0.4)"
+            gap: "10px",
+            textDecoration: "none"
           }}>
-            D
+            <div style={{
+              width: "38px",
+              height: "38px",
+              borderRadius: "10px",
+              background: "var(--gradient-primary)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontWeight: "800",
+              fontSize: "1.2rem",
+              color: "#ffffff",
+              boxShadow: "0 4px 14px rgba(99, 102, 241, 0.4)"
+            }}>
+              E
+            </div>
+            <span style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "1.4rem",
+              fontWeight: "800",
+              letterSpacing: "-0.02em"
+            }}>
+              Eng<span className="gradient-text">Log</span>
+            </span>
+          </Link>
+
+          {/* Desktop Navigation Links */}
+          <nav className="desktop-nav" style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "2rem"
+          }}>
+            <Link href="/" style={{
+              fontSize: "0.95rem",
+              fontWeight: "500",
+              color: "var(--text-main)",
+              transition: "var(--transition-normal)"
+            }}>
+              Trang chủ
+            </Link>
+            <Link href="/#articles" style={{
+              fontSize: "0.95rem",
+              fontWeight: "500",
+              color: "var(--text-muted)",
+              transition: "var(--transition-normal)"
+            }}>
+              Bài học
+            </Link>
+            <Link href="/#newsletter" style={{
+              fontSize: "0.95rem",
+              fontWeight: "500",
+              color: "var(--text-muted)",
+              transition: "var(--transition-normal)"
+            }}>
+              Newsletter
+            </Link>
+          </nav>
+
+          {/* Desktop Action & Mobile Toggle */}
+          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+            {isAdmin ? (
+              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                <span className="tag-badge" style={{ background: "rgba(16, 185, 129, 0.15)", color: "#34d399", border: "1px solid rgba(16, 185, 129, 0.3)" }}>
+                  👑 Admin Mode
+                </span>
+                <button 
+                  onClick={logout}
+                  className="btn-secondary"
+                  style={{ fontSize: "0.82rem", padding: "6px 12px" }}
+                >
+                  Đăng xuất
+                </button>
+              </div>
+            ) : (
+              <button 
+                onClick={() => setIsLoginOpen(true)}
+                className="btn-secondary"
+                style={{ fontSize: "0.85rem", padding: "8px 16px" }}
+              >
+                🔑 Admin Login
+              </button>
+            )}
+
+            <a 
+              href="https://github.com/duongdtz07/test-aws" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-secondary desktop-btn"
+              style={{ fontSize: "0.85rem", padding: "8px 14px" }}
+            >
+              GitHub
+            </a>
+
+            {/* Mobile Hamburger Toggle Button */}
+            <button 
+              onClick={() => setIsOpen(!isOpen)}
+              className="mobile-toggle"
+              aria-label="Toggle Navigation Menu"
+              style={{
+                background: "rgba(255, 255, 255, 0.05)",
+                border: "1px solid var(--border-glass)",
+                borderRadius: "var(--radius-sm)",
+                padding: "8px",
+                color: "var(--text-main)",
+                cursor: "pointer",
+                display: "none",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
-          <span style={{
-            fontFamily: "var(--font-heading)",
-            fontSize: "1.4rem",
-            fontWeight: "800",
-            letterSpacing: "-0.02em"
-          }}>
-            Dev<span className="gradient-text">Log</span>
-          </span>
-        </Link>
+        </div>
 
-        {/* Navigation Links */}
-        <nav style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "2rem"
-        }}>
-          <Link href="/" style={{
-            fontSize: "0.95rem",
-            fontWeight: "500",
-            color: "var(--text-main)",
-            transition: "var(--transition-normal)"
+        {/* Mobile Menu Dropdown */}
+        {isOpen && (
+          <nav className="mobile-menu animate-fade-in" style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
+            padding: "1.25rem 1.5rem",
+            background: "rgba(17, 24, 39, 0.95)",
+            backdropFilter: "blur(20px)",
+            borderBottom: "1px solid var(--border-glass)",
+            marginTop: "0.85rem"
           }}>
-            Trang chủ
-          </Link>
-          <Link href="/#articles" style={{
-            fontSize: "0.95rem",
-            fontWeight: "500",
-            color: "var(--text-muted)",
-            transition: "var(--transition-normal)"
-          }}>
-            Bài viết
-          </Link>
-          <Link href="/#newsletter" style={{
-            fontSize: "0.95rem",
-            fontWeight: "500",
-            color: "var(--text-muted)",
-            transition: "var(--transition-normal)"
-          }}>
-            Newsletter
-          </Link>
-        </nav>
+            <Link 
+              href="/" 
+              onClick={() => setIsOpen(false)} 
+              style={{ fontSize: "1rem", fontWeight: "600", color: "var(--text-main)" }}
+            >
+              Trang chủ
+            </Link>
+            <Link 
+              href="/#articles" 
+              onClick={() => setIsOpen(false)} 
+              style={{ fontSize: "1rem", fontWeight: "500", color: "var(--text-muted)" }}
+            >
+              Bài học
+            </Link>
+            <Link 
+              href="/#newsletter" 
+              onClick={() => setIsOpen(false)} 
+              style={{ fontSize: "1rem", fontWeight: "500", color: "var(--text-muted)" }}
+            >
+              Newsletter
+            </Link>
 
-        {/* Action button */}
-        <a 
-          href="https://github.com/duongdtz07/test-aws" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="btn-secondary"
-          style={{ fontSize: "0.85rem", padding: "8px 16px" }}
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
-          GitHub
-        </a>
-      </div>
-    </header>
+            {isAdmin ? (
+              <button 
+                onClick={() => { logout(); setIsOpen(false); }}
+                className="btn-secondary"
+                style={{ width: "100%", justifyContent: "center" }}
+              >
+                👑 Đăng xuất Admin
+              </button>
+            ) : (
+              <button 
+                onClick={() => { setIsLoginOpen(true); setIsOpen(false); }}
+                className="btn-primary"
+                style={{ width: "100%", justifyContent: "center" }}
+              >
+                🔑 Đăng nhập Admin
+              </button>
+            )}
+          </nav>
+        )}
+      </header>
+
+      {/* Login Modal */}
+      <LoginModal 
+        isOpen={isLoginOpen} 
+        onClose={() => setIsLoginOpen(false)} 
+      />
+    </>
   );
 }

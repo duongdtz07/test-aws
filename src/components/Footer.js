@@ -22,11 +22,11 @@ export default function Footer() {
           fontSize: "1.3rem",
           fontWeight: "800"
         }}>
-          Dev<span className="gradient-text">Log</span>
+          Eng<span className="gradient-text">Log</span>
         </div>
 
         <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", maxWidth: "500px" }}>
-          Chia sẻ kiến thức Lập trình, DevOps, Cloud Architecture và AI từ những trải nghiệm thực tế.
+          Chia sẻ kiến thức Ngữ pháp Tiếng Anh, 12 Thì căn bản, Từ vựng chuyên ngành và Phương pháp Luyện nói trôi chảy.
         </p>
 
         <div style={{
@@ -35,7 +35,7 @@ export default function Footer() {
           fontSize: "0.85rem",
           color: "var(--text-dim)"
         }}>
-          <span>© 2026 DevLog. Built with Next.js App Router.</span>
+          <span>© 2026 EngLog. English Learning Hub Built with Next.js App Router.</span>
         </div>
       </div>
     </footer>

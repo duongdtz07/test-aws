@@ -215,3 +215,112 @@ h1, h2, h3, h4, h5, h6 {
 .animate-fade-in {
   animation: fadeIn 0.4s ease-out forwards;
 }
+
+/* ==========================================
+   RESPONSIVE DESIGN MEDIA QUERIES (Mobile / Tablet / Desktop)
+   ========================================== */
+
+/* Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: flex !important;
+  }
+
+  .desktop-btn {
+    display: none !important;
+  }
+
+  .hero-section {
+    padding: 1.5rem 0 !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .hero-buttons a {
+    width: 100% !important;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr !important;
+    padding: 1.25rem !important;
+  }
+
+  .featured-img-container {
+    height: 180px !important;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .article-header {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .article-title {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .article-cover {
+    height: 220px !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  .article-body {
+    padding: 1.5rem 1.25rem !important;
+    font-size: 0.98rem !important;
+  }
+
+  .newsletter-panel {
+    padding: 2rem 1.25rem !important;
+  }
+}
+
+/* Tablet Devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+
+  .article-cover {
+    height: 320px !important;
+  }
+
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Large Screens / Desktop (> 1024px) */
+@media (min-width: 1025px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+

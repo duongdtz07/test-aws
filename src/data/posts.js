@@ -1,193 +1,185 @@
 export const BLOG_POSTS = [
   {
     id: "1",
-    slug: "building-scalable-cloud-architecture-nextjs-aws",
-    title: "Building Scalable Cloud Architecture with Next.js & AWS",
-    excerpt: "Learn how to architect high-performance, cost-effective serverless web applications using Next.js App Router and AWS services like Lambda and CloudFront.",
-    category: "DevOps & Cloud",
-    tags: ["Next.js", "AWS", "Serverless", "DevOps"],
+    slug: "12-thi-co-ban-trong-tieng-anh-tong-hop-chi-tiet",
+    title: "12 Thì Cơ Bản Trong Tiếng Anh: Cấu Trúc, Cách Dùng & Mẹo Nhớ Nhanh",
+    excerpt: "Tổng hợp toàn bộ 12 thì trong tiếng Anh từ cơ bản đến nâng cao: Thì hiện tại, quá quá, tương lai đi kèm công thức và ví dụ minh họa dễ hiểu nhất.",
+    category: "Ngữ pháp (Grammar)",
+    tags: ["Ngữ pháp", "12 Thì", "Grammar", "Căn bản"],
     date: "Jul 28, 2026",
-    readTime: "6 min read",
+    readTime: "10 phút đọc",
     author: {
       name: "Thành Dương",
-      role: "Cloud Architect & Dev Lead",
+      role: "English Teacher & Content Creator",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
     },
     featured: true,
-    coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80",
     content: `
-## Why Next.js + AWS Serverless?
+## Tổng quan về 12 Thì Trong Tiếng Anh
 
-Modern web applications demand high availability, instant global scalability, and minimal operational overhead. Combining **Next.js App Router** with AWS cloud infrastructure provides a robust foundation for building high-traffic production sites.
+Nắm vững **12 thì trong tiếng Anh** là nền tảng quan trọng nhất giúp bạn xây dựng câu chuẩn ngữ pháp, tự tin trong giao tiếp cũng như làm các bài thi IELTS, TOEIC.
 
-### Key Architectural Pillars
+### 1. Nhóm Thì Hiện Tại (Present Tenses)
 
-1. **Edge Caching via Amazon CloudFront**: Deliver static assets and cached HTML pages instantly from edge locations worldwide.
-2. **Serverless Functions with AWS Lambda**: Execute dynamic Server Component logic without server management overhead.
-3. **Database Integration**: Connecting to Amazon Aurora PostgreSQL using serverless connection pools to prevent connection exhaustion.
+- **Hiện tại đơn (Present Simple)**: Diễn tả hành động lặp đi lặp lại, thói quen hoặc sự thật hiển nhiên.
+  - *Công thức*: S + V(s/es)
+  - *Ví dụ*: She **works** as a software engineer in Singapore.
 
-\`\`\`javascript
-// Next.js Server Action example for fetching cloud telemetry
-export async function getTelemetryData() {
-  const res = await fetch("https://api.aws.internal/metrics", {
-    next: { revalidate: 60 } // Revalidate every minute
-  });
-  return res.json();
-}
-\`\`\`
+- **Hiện tại tiếp diễn (Present Continuous)**: Diễn tả hành động đang diễn ra ngay tại thời điểm nói.
+  - *Công thức*: S + am/is/are + V-ing
+  - *Ví dụ*: They **are studying** English grammar right now.
 
-### Performance Optimization Results
+- **Hiện tại hoàn thành (Present Perfect)**: Diễn tả hành động đã xảy ra trong quá quá nhưng kết quả còn liên quan đến hiện tại.
+  - *Công thức*: S + have/has + V3/ed
+  - *Ví dụ*: I **have learned** English for 3 years.
 
-By implementing server-side rendering with edge caching, response latency dropped by over 65% while reducing server infrastructure costs by 40%.
-    `
+---
+
+### 2. Nhóm Thì Quá Khứ (Past Tenses)
+
+- **Quá khứ đơn (Past Simple)**: Diễn tả hành động đã xảy ra và chấm dứt hoàn toàn trong quá quá.
+  - *Công thức*: S + V2/ed
+  - *Ví dụ*: We **visited** Hanoi last summer.
+
+- **Quá khứ hoàn thành (Past Perfect)**: Diễn tả hành động xảy ra trước một hành động khác trong quá quá.
+  - *Công thức*: S + had + V3/ed
+  - *Ví dụ*: By the time I arrived, the train **had left**.
+
+---
+
+### 3. Mẹo Ghi Nhớ 12 Thì Siêu Tốc
+
+1. **Nhớ theo trục thời gian**: Qúakhi ➔ Hiện tại ➔ Tương lai.
+2. **Nhớ theo thể**: Đơn ➔ Tiếp diễn ➔ Hoàn thành ➔ Hoàn thành tiếp diễn.
+3. **Mẹo trợ động từ**:
+   - Tiếp diễn luôn có **be + V-ing**.
+   - Hoàn thành luôn có **have/has/had + V3/ed**.
+`
   },
   {
     id: "2",
-    slug: "mastering-nextjs-app-router-best-practices",
-    title: "Mastering Next.js App Router: Patterns & Anti-Patterns",
-    excerpt: "A comprehensive deep dive into Layouts, Server Components, Parallel Routes, and Optimizing Bundle Size in modern Next.js apps.",
-    category: "Next.js",
-    tags: ["Next.js", "React", "Frontend", "JavaScript"],
+    slug: "phan-biet-hien-tai-don-va-hien-tai-tiep-dien",
+    title: "Phân Biệt Thì Hiện Tại Đơn & Hiện Tại Tiếp Diễn (Có Bài Tập)",
+    excerpt: "So sánh chi tiết sự khác biệt giữa Present Simple và Present Continuous. Hướng dẫn cách phân biệt qua dấu hiệu nhận biết và ngữ cảnh.",
+    category: "Ngữ pháp (Grammar)",
+    tags: ["Hiện tại đơn", "Hiện tại tiếp diễn", "Grammar"],
     date: "Jul 20, 2026",
-    readTime: "8 min read",
+    readTime: "6 phút đọc",
     author: {
       name: "Thành Dương",
-      role: "Cloud Architect & Dev Lead",
+      role: "English Teacher & Content Creator",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
     },
     featured: false,
-    coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
     content: `
-## Understanding React Server Components (RSC)
+## Khi nào dùng Hiện Tại Đơn vs Hiện Tại Tiếp Diễn?
 
-React Server Components represent a fundamental shift in how web applications render content. By rendering components exclusively on the server, we eliminate client-side JavaScript overhead for static elements.
+Rất nhiều người học hay nhầm lẫn giữa hai thì này. Hãy cùng phân biệt qua các trường hợp cụ thể:
 
-### Rules of Thumb for RSC
+### Bảng So Sánh Chi Tiết
 
-- **Fetch data where it's used**: Component-level data fetching eliminates props drilling.
-- **Keep Client Components at the leaves**: Wrap interactive UI (forms, toggles, stateful buttons) in Client Components while keeping parent layouts as Server Components.
-- **Utilize Suspense boundaries**: Stream content progressively to maximize First Contentful Paint (FCP).
+| Đặc điểm | Thì Hiện Tại Đơn | Thì Hiện Tại Tiếp Diễn |
+| :--- | :--- | :--- |
+| **Bản chất** | Sự thật, thói quen lâu dài | Hành động tạm thời, đang xảy ra |
+| **Trạng từ chỉ tần suất** | always, usually, often, everyday | at the moment, now, right now |
+| **Động từ chỉ trạng thái** | Dùng tốt (like, love, know, want) | **KHÔNG** dùng (Tránh: *I am knowing*) |
 
-\`\`\`jsx
-import { Suspense } from 'react';
-import PostFeed from './PostFeed';
-import SkeletonFeed from './SkeletonFeed';
+### Ví dụ So Sánh
 
-export default function FeedPage() {
-  return (
-    <main>
-      <h1>Latest Engineering Insights</h1>
-      <Suspense fallback={<SkeletonFeed />}>
-        <PostFeed />
-      </Suspense>
-    </main>
-  );
-}
-\`\`\`
-    `
+- *I live in Hanoi.* (Tôi sống ở Hà Nội - thói quen/lâu dài).
+- *I am living in Hanoi for 2 months.* (Tôi đang sống tạm ở Hà Nội 2 tháng).
+`
   },
   {
     id: "3",
-    slug: "modern-ci-cd-pipelines-with-github-actions",
-    title: "Streamlining Docker Deployments with GitHub Actions",
-    excerpt: "Automate your build, test, and container registry push pipeline with GitHub Actions workflows and multi-stage Docker builds.",
-    category: "DevOps & Cloud",
-    tags: ["DevOps", "Docker", "CI/CD", "GitHub"],
+    slug: "100-cum-tu-tieng-anh-giao-tiep-van-phong-thong-dung",
+    title: "100 Cụm Từ Tiếng Anh Giao Tiếp Văn Phòng & Phỏng Vấn Tuyển Dụng",
+    excerpt: "Trang bị vốn từ vựng và câu giao tiếp chuyên nghiệp giúp bạn tự tin viết email, họp online và phỏng vấn với các công ty đa quốc gia.",
+    category: "Giao tiếp (Speaking)",
+    tags: ["Business English", "Giao tiếp", "Từ vựng"],
     date: "Jul 15, 2026",
-    readTime: "5 min read",
+    readTime: "7 phút đọc",
     author: {
-      name: "Alex Rivera",
-      role: "DevOps Engineer",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+      name: "Sarah Jenkins",
+      role: "IELTS & Corporate Trainer",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
     },
     featured: false,
-    coverImage: "https://images.unsplash.com/photo-1618401471353-b98aedd04e11?auto=format&fit=crop&w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
     content: `
-## Automated Deployment Workflows
+## Tiếng Anh Giao Tiếp Nơi Công Sở
 
-Continuous Deployment ensures every verified commit reaches staging and production reliably. Leveraging multi-stage Docker builds keeps image sizes minimal while securing credentials.
+Việc sử dụng từ ngữ lịch sự và chuyên nghiệp (Professional Tone) sẽ giúp bạn ghi điểm tuyệt đối với sếp và đồng nghiệp quốc tế.
 
-### GitHub Actions Pipeline Example
+### Mẫu Câu Viết Email Lịch Sự
 
-\`\`\`yaml
-name: Production Deployment
+- **I am writing to follow up on...** (Tôi viết thư này để theo dõi tiến độ...)
+- **Please find attached the report.** (Vui lòng xem báo cáo được đính kèm.)
+- **Looking forward to hearing from you.** (Rất mong nhận được phản hồi từ bạn.)
 
-on:
-  push:
-    branches: [ main ]
+### Mẫu Câu Trong Cuộc Họp (Meetings)
 
-jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build Docker Image
-        run: docker build -t myapp:latest .
-      - name: Push to Registry
-        run: echo "Deploying container image..."
-\`\`\`
-    `
+- **Could you clarify that point?** (Bạn có thể làm rõ điểm đó được không?)
+- **Let's wrap up today's discussion.** (Hãy tổng kết buổi thảo luận hôm nay.)
+`
   },
   {
     id: "4",
-    slug: "harnessing-ai-assistants-in-software-engineering",
-    title: "Harnessing AI Pair Programming in Production Workflows",
-    excerpt: "How agentic AI models elevate code quality, speed up automated testing, and automate refactoring tasks without compromising safety.",
-    category: "AI & Tech",
-    tags: ["AI", "Software Development", "Productivity"],
+    slug: "phuong-phap-shadowing-luyen-noi-tieng-anh-chuan-tay",
+    title: "Bí Quyết Luyện Phát Âm & Nói Tiếng Anh Trôi Chảy Bằng Phương Pháp Shadowing",
+    excerpt: "Khám phá kỹ thuật Shadowing (nói nhại theo) - phương pháp luyện ngữ điệu và phát âm chuẩn bản xứ hiệu quả nhất hiện nay.",
+    category: "Kỹ năng (Skills)",
+    tags: ["Luyện nói", "Phát âm", "Shadowing", "Kỹ năng"],
     date: "Jul 08, 2026",
-    readTime: "7 min read",
+    readTime: "8 phút đọc",
     author: {
       name: "Thành Dương",
-      role: "Cloud Architect & Dev Lead",
+      role: "English Teacher & Content Creator",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
     },
     featured: false,
-    coverImage: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
     content: `
-## The Rise of Agentic Coding Assistants
+## Kỹ Thuật Shadowing Là Gì?
 
-AI tools have evolved beyond simple autocomplete snippets. Today's agentic systems inspect full project contexts, run automated terminal tests, generate documentation, and collaborate directly with engineers.
+**Shadowing** là phương pháp nghe một đoạn âm thanh mẫu (Podcast, Video TED Talks, Phim) và **nói lặp lại lập tức** (ngay sau speaker 0.5 - 1 giây) giống như một cái bóng.
 
-### Key Workflow Enhancements
+### 4 Bước Thực Hành Shadowing Mỗi Ngày
 
-- **Instant Context Synthesis**: Rapidly understand unknown codebases.
-- **Automated Test Coverage**: Write edge-case test suites in seconds.
-- **Refactoring Guardrails**: Detect security vulnerabilities and performance bottlenecks before merge.
-    `
+1. **Bước 1: Chọn bài nghe phù hợp** (dài 1 - 2 phút, nói tốc độ vừa phải).
+2. **Bước 2: Nghe và đọc hiểu Transcript** (đảm bảo hiểu hết nghĩa từ vựng).
+3. **Bước 3: Nghe và nói đuổi theo mâu** (tập trung vào ngữ điệu và nhấn trọng âm).
+4. **Bước 4: Ghi âm & So sánh** (lắng nghe lại giọng của bạn để sửa lỗi sai).
+`
   },
   {
     id: "5",
-    slug: "designing-glassmorphic-ui-with-vanilla-css",
-    title: "Designing Glassmorphic Web UIs with Pure CSS",
-    excerpt: "Craft ultra-premium backdrop filters, glowing gradient borders, and sleek dark modes using modern CSS variables and zero dependencies.",
-    category: "Frontend",
-    tags: ["CSS", "UI/UX", "Design", "Frontend"],
+    slug: "50-tub-vung-toeic-ielts-chu-de-cong-nghe-thong-tin",
+    title: "50 Từ Vựng Tiếng Anh Chủ Đề Công Nghệ & Internet Thông Dụng",
+    excerpt: "Tổng hợp danh sách 50 từ vựng và thuật ngữ tiếng Anh chuyên ngành công nghệ thông tin giúp bạn nâng band điểm Speaking & Writing.",
+    category: "Từ vựng (Vocabulary)",
+    tags: ["Từ vựng", "IELTS", "TOEIC", "Vocabulary"],
     date: "Jun 30, 2026",
-    readTime: "4 min read",
+    readTime: "5 phút đọc",
     author: {
-      name: "Elena Rostova",
-      role: "UI Engineer",
-      avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+      name: "David Miller",
+      role: "Linguistics Researcher",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
     },
     featured: false,
-    coverImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
     content: `
-## The Power of Backdrop Filters
+## Từ Vựng Tiếng Anh Chủ Đề Công Nghệ (Technology)
 
-Glassmorphism creates a sense of depth, elegance, and hierarchy in modern web interfaces. By combining semi-transparent background colors with \`backdrop-filter: blur()\`, components blend seamlessly into dark wallpaper backgrounds.
-
-\`\`\`css
-.glass-card {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-}
-\`\`\`
-    `
+- **Algorithm** (n) /ˈæl.ɡə.rɪ.ðəm/: Thuật toán
+- **Artificial Intelligence** (n) /ˌɑː.tɪˈfɪʃ.əl ɪnˈtel.ɪ.dʒəns/: Trí tuệ nhân tạo
+- **Database** (n) /ˈdeɪ.tə.beɪs/: Cơ sở dữ liệu
+- **Cybersecurity** (n) /ˌsaɪ.bə.sɪˈkjʊə.rə.ti/: An ninh mạng
+- **User Interface** (n) /ˈjuː.zər ˈɪn.tə.feɪs/: Giao diện người dùng
+`
   }
 ];
 
-export const CATEGORIES = ["All", "DevOps & Cloud", "Next.js", "AI & Tech", "Frontend"];
+export const CATEGORIES = ["All", "Ngữ pháp (Grammar)", "Giao tiếp (Speaking)", "Từ vựng (Vocabulary)", "Kỹ năng (Skills)"];

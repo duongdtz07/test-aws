@@ -16,7 +16,7 @@ export default function NewsletterCard() {
 
   return (
     <section id="newsletter" style={{ marginTop: "4rem" }}>
-      <div className="glass-panel" style={{
+      <div className="glass-panel newsletter-panel" style={{
         padding: "3.5rem 2rem",
         textAlign: "center",
         position: "relative",
@@ -25,14 +25,14 @@ export default function NewsletterCard() {
         border: "1px solid rgba(99, 102, 241, 0.25)"
       }}>
         <div style={{ maxWidth: "580px", margin: "0 auto", position: "relative", zIndex: 2 }}>
-          <span className="tag-badge" style={{ marginBottom: "1rem" }}>✨ DEV NEWSLETTER</span>
+          <span className="tag-badge" style={{ marginBottom: "1rem" }}>✨ ENGLISH NEWSLETTER</span>
           
           <h2 style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>
-            Đăng ký nhận bài viết mới hàng tuần
+            Nhận Bài Học Tiếng Anh Miễn Phí Mỗi Tuần
           </h2>
           
           <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", marginBottom: "2rem" }}>
-            Cập nhật những xu hướng công nghệ mới nhất về Next.js, Cloud, DevOps & AI trực tiếp vào hộp thư của bạn. Zero spam.
+            Cập nhật mẹo học ngữ pháp, 12 thì cơ bản, từ vựng giao tiếp thực tế & bài tập bổ ích trực tiếp qua email. Zero spam.
           </p>
 
           {submitted ? (
