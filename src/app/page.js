@@ -1,66 +1,67 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import BlogContent from "@/components/BlogContent";
+import NewsletterCard from "@/components/NewsletterCard";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="container" style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
+      {/* Hero Header */}
+      <section style={{
+        textAlign: "center",
+        maxWidth: "780px",
+        margin: "0 auto 4rem auto",
+        padding: "2rem 0"
+      }}>
+        <div style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "8px",
+          padding: "6px 16px",
+          borderRadius: "var(--radius-full)",
+          background: "rgba(99, 102, 241, 0.1)",
+          border: "1px solid rgba(99, 102, 241, 0.25)",
+          fontSize: "0.85rem",
+          fontWeight: "600",
+          color: "#a5b4fc",
+          marginBottom: "1.5rem"
+        }}>
+          🚀 Personal Engineering Log & Tech Insights
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+
+        <h1 style={{
+          fontSize: "3rem",
+          lineHeight: "1.15",
+          letterSpacing: "-0.03em",
+          marginBottom: "1.25rem"
+        }}>
+          Khám phá Kỹ thuật Phần mềm, <br/>
+          <span className="gradient-text">Cloud Architecture & Next.js</span>
+        </h1>
+
+        <p style={{
+          fontSize: "1.1rem",
+          color: "var(--text-muted)",
+          lineHeight: "1.6",
+          marginBottom: "2rem"
+        }}>
+          Nơi tổng hợp các bài viết kinh nghiệm thực tế về việc thiết kế hệ thống cloud, 
+          tối ưu hóa hiệu năng ứng dụng web và tự động hóa quy trình CI/CD.
+        </p>
+
+        <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
+          <a href="#articles" className="btn-primary">
+            Khám phá bài viết
           </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+          <a href="#newsletter" className="btn-secondary">
+            Nhận tin mới
           </a>
         </div>
-      </main>
+      </section>
+
+      {/* Main Blog Section */}
+      <BlogContent />
+
+      {/* Newsletter Section */}
+      <NewsletterCard />
     </div>
   );
 }
